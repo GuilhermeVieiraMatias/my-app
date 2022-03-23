@@ -28,9 +28,9 @@ function App() {
         <fieldset>
           <div className="form-group mb-3">
             <label htmlFor="item">Adicionar Novo Item na Lista:</label>
-            <input type="text" placeholder="Item" value={item} name="item" onChange = {e => setItem(e.target.value)} />
+            <input id="item" type="text" className="form-control" value={item} name="item" onChange = {e => setItem(e.target.value)} />
           </div>
-          <button onClick={addItem}>Adicionar Item</button>
+          <button className="btn btn-primary" type="submit" onClick={addItem}>Adicionar Item</button>
         </fieldset>
       </div>
     </div>
