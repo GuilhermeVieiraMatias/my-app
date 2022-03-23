@@ -1,6 +1,18 @@
 import React, { useState } from 'react';
 import './App.css';
 
+function Lista({ listaItem }) {
+
+	  return (<ul className="lista-items">
+
+		{listaItem.map((item) => (
+		  <li>{item}</li>
+		))}
+
+	  </ul>)
+
+	}
+
 function App() {
 
   const [item, setItem] = useState('');
@@ -18,13 +30,9 @@ function App() {
         <h2>Lista de Compras:</h2>
       </header>
       <div className="lista-compras-container">
-        <ul className="lista-items">
-          {itemList.map((item) => (
-            <li>{item}</li>
-          ))}
-        </ul>
+        <Lista listaItem={itemList} />
       </div>
-      <div className="form-add-item" action="#" method="post">
+      <div className="form-add-item">
         <fieldset>
           <div className="form-group mb-3">
             <label htmlFor="item">Adicionar Novo Item na Lista:</label>
