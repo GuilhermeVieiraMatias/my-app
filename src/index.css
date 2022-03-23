@@ -1,18 +1,51 @@
 .App {
-  text-align: center;
-
+  max-width: 1190px;
+  margin: 12px auto;
+  border: 1px solid #d0d0d0;
+  padding: 9px;
+  border-radius: 6px;
 }
 
-html {
-  color: #fff;
-  background-color: #282c34;
+@media screen and (max-width: 1189px) {
+  .App {
+    border-radius: 0;
+    margin: 0 auto;
+    border: 0;
+  }
 }
 
-ul {
-  list-style-type: none;
+.App header {
+  background-color: #ededed;
+  padding: 12px;
+  border-radius: 6px;
+}
+.App header h2 {
+  line-height: 1;
+  padding: 0;
+  margin: 0;
 }
 
-li {
-  font: 200 20px/1.5 Helvetica, Verdana, sans-serif;
-  border-bottom: 1px solid #ccc;
+.App .form-add-item {
+  background-color: #fcfcfc;
+  border: 1px solid #f6f6f6;
+  padding: 9px 12px;
+  border-radius: 6px;
+}
+
+.App .lista-compras-container {
+  padding: 21px 0;
+  max-height: 310px;
+  overflow: auto;
+}
+
+.App .lista-items {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  font-size: 18px;
+}
+.App .lista-items li:nth-child(2n) {
+  background-color: #fcfcfc;
+}
+.App .lista-items li + li {
+  margin-top: 7px;
 }

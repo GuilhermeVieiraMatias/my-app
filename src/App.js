@@ -14,14 +14,25 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Lista de Compras</h1>
-      <input type="text" placeholder="Item" value={item} name="item" onChange = {e => setItem(e.target.value)} />
-      <button onClick={addItem}>Adicionar Item</button>
-      <ul>
-        {itemList.map((item) => (
-          <li>{item}</li>
-        ))}
-      </ul>
+      <header>
+        <h2>Lista de Compras:</h2>
+      </header>
+      <div className="lista-compras-container">
+        <ul className="lista-items">
+          {itemList.map((item) => (
+            <li>{item}</li>
+          ))}
+        </ul>
+      </div>
+      <div className="form-add-item" action="#" method="post">
+        <fieldset>
+          <div className="form-group mb-3">
+            <label htmlFor="item">Adicionar Novo Item na Lista:</label>
+            <input type="text" placeholder="Item" value={item} name="item" onChange = {e => setItem(e.target.value)} />
+          </div>
+          <button onClick={addItem}>Adicionar Item</button>
+        </fieldset>
+      </div>
     </div>
   );
 }
